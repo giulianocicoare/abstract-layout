@@ -6,7 +6,8 @@ html,body {width:100%;
             height:100%;
             background-image: url(../assets/background\ \(2\).jpg);
             background-size: cover;
-            position: relatife;}
+            position: relative;}
+/* width nu direct pe imagine, te rog. Le vad foarte tretch-uite, exact din cauza asta */
 .title-image img {width: 40%;
                   position:absolute;
                   left: 45px;
@@ -34,9 +35,11 @@ main {width:100%;
 .points-left img {width:150px;
                   height: 300px;}
 .center-container {flex-flow: column;}
+/* era ok sa fi facut o pozitionare absoluta fata de un parinte relative care putea fi chiar .container */
 .title-background {position:relative;
                    left: 30%;
                    top: 80px;}
+/* din nou, avand dimensiuni direct pe img, le stretchuie si pierzi controlul asupra calitatii */
 .title-background img {width:500px;
                        height:60px;}
 .abstract img {width:300px;}
@@ -53,9 +56,13 @@ main {width:100%;
                        margin: 0 auto;
                        padding-top: 30px;}
 .horizontal-lines img {height: 130px;}
-.paragraf {width:450px;
-           margin: 0 auto;
-           padding-top:30px;
-           color: white;}
+/* nu vad de ce a fost necesar sa folosesti inca un div cu clasa paragraf. Nu puteau fi puse stilurile astea direct pe <p>? */
+.paragraf {
+      width:450px;
+      margin: 0 auto;
+      padding-top:30px;
+      color: white;
+      text-align: center;
+}
 .horizontal-paragraf {display:flex;}
-.horizontal-lines {padding-lefT: 15px;}
+.horizontal-lines {padding-left: 15px;}
